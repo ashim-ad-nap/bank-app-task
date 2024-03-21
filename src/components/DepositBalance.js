@@ -32,7 +32,7 @@ function DepositBalance() {
         "Insufficient deposit amount. The amount should be more than Rs. 100"
       );
       return;
-    } else if (newDeposit < 0) {
+    } else if (isNaN(newDeposit) || newDeposit <= 0) {
       alert("Please provide a valid amount");
       return;
     }

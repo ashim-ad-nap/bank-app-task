@@ -34,7 +34,10 @@ function WithdrawBalance() {
         "Insufficient balance. You cannot withdraw more than your current balance."
       );
       return;
-    }
+    } else if (isNaN(newWithdrawal) || newWithdrawal <= 0) {
+        alert("Please provide a valid amount");
+        return;
+      }
 
     const newBalance = parseFloat(balance) - newWithdrawal;
 
